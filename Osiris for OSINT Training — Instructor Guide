@@ -1,0 +1,293 @@
+# Osiris for OSINT Training — Instructor Guide + vidéo : https://www.youtube.com/watch?v=uayYPAW4C94&t=1082s
+
+## 1. Training Context
+
+Osiris is often presented as an “Open Source Palantir”, which creates confusion among learners.
+
+🎯 Training objective:
+Help students understand:
+- the difference between **data visualization** and **intelligence platforms**
+- how to use OSINT tools critically
+- how to build **real analytical reasoning**, not just tool usage
+
+---
+
+## 2. Pedagogical Positioning
+
+Osiris should NOT be taught as:
+❌ a complete intelligence platform  
+❌ a production-grade security tool  
+
+Osiris SHOULD be used as:
+✅ a training sandbox  
+✅ a visualization tool  
+✅ an entry point to OSINT methodologies  
+
+---
+
+## 3. Learning Objectives
+
+After using Osiris, learners should be able to:
+
+- distinguish **data vs intelligence**
+- identify **data source limitations**
+- perform **basic correlation between events**
+- understand **contextual analysis**
+- question tool marketing claims
+
+---
+
+## 4. Core Teaching Concept
+
+### 👉 Key Lesson: "The Map is not the Intelligence"
+
+Students often think:
+> “The interface is powerful, so the intelligence is powerful”
+
+Reality:
+- the map is only a display layer
+- value comes from:
+  - data quality
+  - data processing
+  - contextual analysis
+
+---
+
+## 5. Practical Exercises (Ready to Use)
+
+---
+
+### 🧪 Exercise 1 — Global Incident Exploration
+
+**Scenario:**
+A protest or conflict emerges in a specific region.
+
+**Task:**
+- Locate the region in Osiris
+- Activate:
+  - global incidents
+  - news feed
+- Identify:
+  - what is happening
+  - how many sources confirm it
+
+**Learning outcome:**
+👉 Understand multi-source validation
+
+---
+
+### 🧪 Exercise 2 — Data Reliability Analysis
+
+**Task:**
+- Activate multiple layers:
+  - flights
+  - CCTV
+  - maritime
+- Observe:
+  - missing data
+  - loading delays
+
+**Questions:**
+- Are all regions equally covered?
+- Is the data consistent?
+
+**Learning outcome:**
+👉 Critical thinking about data completeness
+
+---
+
+### 🧪 Exercise 3 — OSINT Correlation
+
+**Scenario:**
+Suspicious activity in a given country.
+
+**Task:**
+- Use Osiris to locate the area
+- Cross-check with:
+  - AbuseIPDB
+  - Feodo Tracker
+- Identify:
+  - possible correlation between cyber + physical world
+
+**Learning outcome:**
+👉 Linking technical data to real-world context
+
+---
+
+### 🧪 Exercise 4 — Morning Intelligence Briefing
+
+**Scenario:**
+“You are a security analyst starting your day”
+
+**Task:**
+- Open Osiris
+- Scan:
+  - news
+  - global incidents
+  - hotspots
+- Produce a 3-point briefing:
+  - what changed
+  - what matters
+  - what to watch
+
+**Learning outcome:**
+👉 Synthesizing information under time constraint
+
+---
+
+### 🧪 Exercise 5 — Tool Critique (Advanced)
+
+**Task:**
+Students must answer:
+
+- Is Osiris a reliable intelligence tool?
+- What are its limitations?
+- When would you use it?
+- When would you NOT use it?
+
+**Learning outcome:**
+👉 Moving from tool usage → analytical judgment
+
+---
+
+## 6. Real Instructor Insights (From Field Feedback)
+
+### 💬 Insight 1 — "Students trust interfaces too much"
+
+Visual tools create false confidence.
+
+👉 Trainer must constantly challenge:
+- data origin
+- data freshness
+- data meaning
+
+---
+
+### 💬 Insight 2 — "OSINT ≠ Intelligence"
+
+Many learners confuse:
+- collecting data
+- producing intelligence
+
+👉 Osiris is perfect to illustrate this gap.
+
+---
+
+### 💬 Insight 3 — "Correlation ≠ Causation"
+
+Example:
+- event in a country
+- cyber activity from same region
+
+👉 Students must learn:
+- correlation is a hypothesis, not proof
+
+---
+
+## 7. FAQ for Training Sessions
+
+---
+
+### Q: Is Osiris a Palantir alternative?
+
+👉 No.
+
+Use it as:
+- a visualization tool
+- a learning support
+
+Not as:
+- an enterprise platform
+
+---
+
+### Q: Why does it feel powerful?
+
+👉 Because of the interface (map + layers)
+
+But:
+- underlying data is limited
+
+---
+
+### Q: Is the data reliable?
+
+👉 Partially.
+
+- public feeds = unstable
+- incomplete coverage
+- delayed updates
+
+---
+
+### Q: Should we trust the alerts?
+
+👉 No without verification.
+
+Always:
+✔️ cross-check sources  
+✔️ validate context  
+✔️ confirm timeline  
+
+---
+
+### Q: Can we use it in a real SOC?
+
+👉 Only as a complement.
+
+Not as:
+- primary threat intelligence tool
+
+---
+
+### Q: What is the biggest takeaway?
+
+👉 Intelligence is NOT the tool.
+
+It is:
+- data + context + reasoning
+
+---
+
+## 8. Trainer Best Practices
+
+✅ Always combine Osiris with:
+- AbuseIPDB
+- Feodo Tracker
+- News sources
+
+✅ Ask students:
+- "Where does this data come from?"
+- "Can we trust it?"
+- "What is missing?"
+
+✅ Force structured thinking:
+- Observation → Hypothesis → Verification
+
+---
+
+## 9. Ethical & Legal Reminder
+
+⚠️ Important for training environments:
+
+- Do NOT use port scanning features on external targets
+- Only test on:
+  - owned systems
+  - authorized environments
+
+👉 Responsibility always lies with the user
+
+---
+
+## 10. Conclusion for Trainers
+
+Osiris is NOT a production intelligence tool.
+
+👉 It is a **teaching accelerator**.
+
+Best use:
+- helping students understand
+- how intelligence is built
+- how misleading tools can be
+- how to think like analysts
+``
