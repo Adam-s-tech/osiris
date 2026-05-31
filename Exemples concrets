@@ -1,0 +1,125 @@
+## 6. Real Use Cases for Osiris
+
+Osiris can be valuable in the following scenarios:
+
+---
+
+### ✅ Situational Awareness (Geopolitics & Risk Monitoring)
+
+**Example:**
+A company planning a business trip to the Middle East can:
+- monitor geopolitical tensions in real time
+- check nearby incidents (conflicts, protests, disruptions)
+- track airspace activity (flight rerouting)
+
+👉 Helps decide:
+- whether to maintain travel
+- adjust routes
+- postpone activities
+
+---
+
+### ✅ OSINT Research & Event Correlation
+
+**Example:**
+An analyst investigating a cyberattack can:
+- identify the geographical origin of suspicious IP activity (via external tools like AbuseIPDB)
+- correlate with:
+  - local incidents
+  - recent outages
+  - regional cyber alerts
+
+👉 Enables quick visual correlation between:
+- cyber events
+- physical or geopolitical context
+
+---
+
+### ✅ Cyber Threat Contextualization
+
+**Example:**
+A security team notices unusual traffic from a foreign region.
+
+Using Osiris:
+- they locate the region on the map
+- overlay global incidents and news
+- identify potential links (e.g. ongoing cyber campaigns)
+
+👉 Adds context to technical alerts:
+- transforms raw logs into actionable intelligence
+
+---
+
+### ✅ Monitoring Global Supply Chain Risks
+
+**Example:**
+A logistics company can:
+- track disruptions near key ports
+- monitor maritime traffic anomalies
+- detect incidents affecting transit zones
+
+👉 Helps anticipate:
+- delays
+- rerouting needs
+- supplier risk exposure
+
+---
+
+### ✅ Training Junior Analysts (Education Use Case)
+
+**Example:**
+A cybersecurity trainer uses Osiris to:
+- teach how multiple data streams interact
+- demonstrate correlation between:
+  - news
+  - incidents
+  - infrastructure
+
+👉 Students learn:
+- how to move from "data" to "intelligence"
+- how to analyze signals, not just tools
+
+---
+
+### ✅ Quick Daily Intelligence Briefing
+
+**Example:**
+A consultant can:
+- open Osiris every morning
+- scan:
+  - global incidents
+  - trends
+  - hotspots
+
+👉 Use it as a:
+- lightweight intelligence dashboard
+- starting point before deeper investigation
+
+---
+
+### ✅ Small Security Teams (Augmented Monitoring)
+
+**Example:**
+A small SOC team without access to expensive threat intel platforms:
+- uses Osiris alongside free tools (FeodoTracker, AbuseIPDB, etc.)
+- builds a basic situational awareness layer
+
+👉 Not a replacement for enterprise tools, but:
+- a useful complementary layer
+
+---
+
+### ⚠️ Important Limitation Reminder
+
+In all use cases above:
+
+👉 Value is limited by:
+- quality of public data
+- refresh reliability
+- lack of deep integration
+
+Osiris should be used as:
+✔️ an exploration tool  
+✔️ a visualization layer  
+
+❌ not as a primary source of truth
