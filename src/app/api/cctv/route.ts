@@ -282,8 +282,52 @@ async function fetchAsiaCameras(): Promise<any[]> {
 }
 
 
+// ── MIDDLE EAST: Israel, Lebanon ──
+async function fetchMiddleEastCameras(): Promise<any[]> {
+  const cams: any[] = [];
+  
+  // Israel Curated (Embedded)
+  cams.push(
+    {
+      id: 'il-israel-multicam', lat: 32.0853, lng: 34.7818,
+      name: 'Israel Multi-Cam (Live)', city: 'Tel Aviv', country: 'Israel',
+      stream_url: 'https://www.youtube.com/embed/gmtlJ_m2r5A?autoplay=1&mute=1',
+      stream_type: 'iframe',
+      source: 'YouTube Live',
+    },
+    {
+      id: 'il-jerusalem-live', lat: 31.7767, lng: 35.2345,
+      name: 'Jerusalem Western Wall', city: 'Jerusalem', country: 'Israel',
+      stream_url: 'https://www.youtube.com/embed/77akujLn4k8?autoplay=1&mute=1',
+      stream_type: 'iframe',
+      source: 'YouTube Live',
+    }
+  );
+
+  // Lebanon Curated (Embedded)
+  cams.push(
+    {
+      id: 'lb-beirut-skyline', lat: 33.8938, lng: 35.5018,
+      name: 'Beirut Skyline Live', city: 'Beirut', country: 'Lebanon',
+      stream_url: 'https://www.youtube.com/embed/qJf4NqPKLjI?autoplay=1&mute=1',
+      stream_type: 'iframe',
+      source: 'YouTube Live',
+    },
+    {
+      id: 'lb-me-multicam', lat: 33.2721, lng: 35.2033,
+      name: 'Middle East Multi-Cam (Live)', city: 'Regional', country: 'Middle East',
+      stream_url: 'https://www.youtube.com/embed/oxT5R6I0N6E?autoplay=1&mute=1',
+      stream_type: 'iframe',
+      source: 'YouTube Live',
+    }
+  );
+
+  return cams;
+}
+
 // ═══ REGION MAPPING ═══
 const REGION_FETCHERS: Record<string, () => Promise<any[]>> = {
+  'middle-east': fetchMiddleEastCameras,
   'uk': fetchTfLCameras,
   'us-west': async () => [...await fetchWSDOTCameras(), ...await fetchCaltransCameras()],
   'us-east': fetchUSEastCameras,
@@ -355,6 +399,10 @@ function getRegionsForBounds(lat: number, lng: number, radius: number): string[]
   if (inSpain) regions.push('spain');
   if (inPoland) regions.push('poland');
 
+  // Middle East
+  const inMiddleEast = lat > 29 && lat < 34.5 && lng > 34 && lng < 36.5;
+  if (inMiddleEast) regions.push('middle-east');
+
   // Japan
   if (lat > 24 && lat < 46 && lng > 122 && lng < 154) regions.push('japan');
 
@@ -403,6 +451,10 @@ export async function GET(request: Request) {
       }
     }
 
+    const cacheControl = allCameras.length < 50 
+      ? 'no-store, max-age=0' 
+      : 'public, s-maxage=300, stale-while-revalidate=600';
+
     return NextResponse.json({
       cameras: allCameras,
       total: allCameras.length,
@@ -410,7 +462,7 @@ export async function GET(request: Request) {
       regions: regionsToFetch,
       timestamp: new Date().toISOString(),
     }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      headers: { 'Cache-Control': cacheControl },
     });
   } catch (error) {
     console.error('CCTV fetch error:', error);
